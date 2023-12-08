@@ -10,7 +10,7 @@
             <label for="dropdown" class="block text-sm font-medium text-gray-600">Select an option:</label>
             <select id="dropdown" name="selected_option" onchange="document.getElementById('dropdownForm').submit()" class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
             @php
-                $classesName = [1 => 'Web Engineering', 2 => 'Software Construction', 3 => 'Embedded Systems', 4 => 'Cloud Computing', 5 => 'Technical And Business Writing'];
+            $classesName = [1 => 'Web Engineering', 2 => 'Software Construction', 3 => 'Embedded Systems', 4 => 'Cloud Computing', 5 => 'Technical And Business Writing', 6 => 'Intro To Management'];
             @endphp
 
                 <!-- Default value when the page is loaded -->
@@ -29,6 +29,8 @@
                     <div class="border border-gray-300 p-4 rounded-md">
                         <p class="text-lg font-semibold mb-2">Class: {{ $classesName[$attendance->classid] }}</p>
                         <p class="text-gray-700 mb-1">Is Present: {{ $attendance->isPresent ? 'Yes' : 'No' }}</p>
+                        <p class="text-gray-700 mb-1">Start Time: {{ $attendance->class->starttime }}</p>
+                        <p class="text-gray-700 mb-1">End Time: {{ $attendance->class->endtime }}</p>
                         <p class="text-gray-700">Comments: {{ $attendance->comments }}</p>
                     </div>
                 @endforeach
