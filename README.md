@@ -1,66 +1,71 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Attendance Recorder
+![editor](https://github.com/mqasim41/attendance_recorder/assets/114048264/9e88c87f-c4b5-4d60-b982-fa5afd805048)
+![student](https://github.com/mqasim41/attendance_recorder/assets/114048264/87e9bfeb-ab65-4b21-bd89-efb5c030e7df)
+![login](https://github.com/mqasim41/attendance_recorder/assets/114048264/38eeb451-0456-4fdc-8ec4-91d76682f8a7)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### Introduction:
 
-## About Laravel
+This document outlines the approach employed by Muhammad Qasim and Attiya Waqar to develop the attendance recorder application for CS344: Web Engineering Lab 10. The objective is to implement a user-friendly application that allows teachers to take attendance and students to view their attendance. The application should authenticate users, provide a master view, and color-code attendance based on predefined criteria.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Solution Overview:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The solution involves using HTML5, CSS3, JavaScript, Laravel, and MySQL for web development. The core functionality includes user authentication, session management, and dynamic generation of views for teachers and students. The database schema provided serves as the foundation for storing attendance records, class details, and user information.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Key Features:
 
-## Learning Laravel
+1. **User Authentication:**
+   - Utilize Laravel's authentication mechanisms to secure the application.
+   - Implement role-based access control for teachers, students, and potentially an admin role.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2. **Master View:**
+   - Create a master view accessible to all users after authentication.
+   - Design a clean and intuitive interface that serves as a central hub for teachers and students.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+3. **Teacher Functionality:**
+   - Display the current attendance session and a list of previous/upcoming sessions.
+   - Allow teachers to mark attendance for any student in any session.
+   - Implement color coding for attendance based on predefined criteria (red for below 75%, yellow for below 85%, and green otherwise).
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+4. **Student Functionality:**
+   - Enable students to view their own attendance records only.
+   - Implement color coding for students' attendance based on the same criteria as for teachers.
 
-## Laravel Sponsors
+5. **Database Interaction:**
+   - Utilize Laravel's Eloquent ORM to interact with the MySQL database.
+   - Implement queries to fetch and update attendance records, class details, and user information.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+6. **Nice Interface:**
+   - Use HTML5 and CSS3 (Tailwind CSS) to design a visually appealing and responsive interface.
+   - Ensure a consistent and user-friendly experience across different devices.
 
-### Premium Partners
+### Development Steps:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+1. **Database Setup:**
+   - Execute provided SQL scripts to create necessary tables (`attendance`, `class`, `user`).
+   - Establish relationships between tables, considering foreign keys.
 
-## Contributing
+2. **Laravel Project Initialization:**
+   - Create a new Laravel project.
+   - Configure database connection settings in the Laravel configuration.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. **Authentication Setup:**
+   - Use Laravel's built-in authentication scaffolding to set up user registration and login.
+   - Extend the default user model to include the `role` field.
 
-## Code of Conduct
+4. **Route Configuration:**
+   - Define routes for different views and functionalities (master view, teacher view, student view).
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. **Controller Implementation:**
+   - Create controllers to handle user authentication, master view, teacher functionality, and student functionality.
 
-## Security Vulnerabilities
+6. **View Creation:**
+   - Develop Blade views for the master view, teacher view, and student view.
+   - Use JavaScript to enhance the dynamic behavior of the views.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. **Styling:**
+   - Apply Tailwind CSS styles to create an aesthetically pleasing interface.
+   - Ensure responsiveness for various screen sizes.
 
-## License
+### Conclusion:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This solution approach aims to fulfill the specified objectives, providing a robust and user-friendly attendance recorder application for NUST students and teachers.
