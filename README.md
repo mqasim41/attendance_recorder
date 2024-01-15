@@ -1,5 +1,5 @@
 # Attendance Recorder
-![editor](https://github.com/mqasim41/attendance_recorder/assets/114048264/9e88c87f-c4b5-4d60-b982-fa5afd805048)
+![leaf](https://github.com/mqasim41/attendance_recorder/assets/114048264/3c33ab9d-123e-4697-9373-ef4344d97a9b)
 ![student](https://github.com/mqasim41/attendance_recorder/assets/114048264/87e9bfeb-ab65-4b21-bd89-efb5c030e7df)
 ![login](https://github.com/mqasim41/attendance_recorder/assets/114048264/38eeb451-0456-4fdc-8ec4-91d76682f8a7)
 
